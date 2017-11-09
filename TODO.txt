@@ -1,0 +1,6 @@
+- join
+- delete min
+- add
+- test and debug
+- formatting
+- review
