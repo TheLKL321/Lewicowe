@@ -66,4 +66,7 @@ let is_empty q =
 
 (*
 #use "leftist.ml";;
+#use "GH_Mucosolvan.ml";;
+#use "mgienieczko.ml";;
+#use "tkanas.ml";;
 *)
