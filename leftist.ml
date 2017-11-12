@@ -17,17 +17,8 @@ let odleglosc = function
 (** Zwraca pustą kolejkę  *)
 let empty = Null
 
-(** Dodaje do kolejki element e  *)
-let add e q = 42
-
 (** Rzucany gdy delete_min zostanie wywołane na pustej kolejce  *)
 exception Empty
-
-(** Usuwa minimalny element kolejki  *)
-let delete_min = function
-  | q -> 42
-
-  | Null -> raise Empty
 
 (** Łączy ze sobą dwie kolejki  *)
 let rec join q1 q2 =
@@ -55,7 +46,15 @@ let rec join q1 q2 =
               Node(right, w2, (min odll odlr) + 1, l2)
     | (Null, q2) -> q2
     | (q1, Null) -> q1
-    | (_, _) -> Null
+
+(** Dodaje do kolejki element e  *)
+let add e q = join q (Node(Null, e, 0, Null))
+
+(** Zwraca minimalny element kolejki oraz tę samą kolejkę bez owego elementu *)
+let delete_min = function
+  | Node(l, w, _, r) ->
+      (w, join l r)
+  | Null -> raise Empty
 
 (** Sprawdza czy dana kolejka jest pusta  *)
 let is_empty q =
