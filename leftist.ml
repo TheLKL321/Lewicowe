@@ -65,7 +65,7 @@ let is_empty q =
 ;;
 
 (** TESTY  *)
-
+(*
 (* simple tests *)
 let a = empty;;
 let b = add 1 empty;;
@@ -271,3 +271,4 @@ zwin lg g 0 ": g";;
 zwin lh h 0 ": h";;
 zwin li i 0 ": i";;
 zwin lj j 0 ": j";;
+*)
